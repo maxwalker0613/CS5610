@@ -26,6 +26,7 @@ function MainModule(listingsID = "#listings") {
       src="${listing.picture_url}"
       class="card-img-top"
       alt="${listing.name}"
+      onerror="this.onerror=null; this.src='https://placehold.co/400x300?text=No+Image';"
     />
     <div class="card-body">
       <h5 class="card-title">${listing.name}</h5>
@@ -33,7 +34,7 @@ function MainModule(listingsID = "#listings") {
       <p class="card-text">${listing.description}</p>
       <p><strong>Amenities:</strong> ${amenitiesPreview}...</p>
       <div class="d-flex align-items-center">
-        <img src="${listing.host_picture_url}" alt="${listing.host_name}" style="width: 30px; height: 30px; border-radius: 50%; margin-right: 8px;" />
+        <img src="${listing.host_picture_url}" alt="${listing.host_name}" style="width: 30px; height: 30px; border-radius: 50%; margin-right: 8px;" onerror="this.onerror=null; this.src='https://placehold.co/30x30';" />
         <span>Hosted by ${listing.host_name}</span>
       </div>
       <p><strong>${listing.price}</strong> / night</p>

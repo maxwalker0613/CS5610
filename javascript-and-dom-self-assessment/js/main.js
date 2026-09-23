@@ -26,7 +26,7 @@ function MainModule(listingsID = "#listings") {
       src="${listing.picture_url}"
       class="card-img-top"
       alt="${listing.name}"
-      onerror="this.onerror=null; this.src='https://placehold.co/400x300?text=No+Image';"
+      onerror="this.onerror=null; this.src='https://placehold.co/400x300?text=Photo+Unavailable';"
     />
     <div class="card-body">
       <h5 class="card-title">${listing.name}</h5>
